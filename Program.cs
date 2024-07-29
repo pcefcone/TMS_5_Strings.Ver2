@@ -6,7 +6,13 @@ internal class Program
     {
         string inputData = "2343-ggh-1233-wtw-0g5k";
         Console.WriteLine($"Our string looks like---> {inputData}");
-        
+        StringMethods.ReplaceLettersToStars(inputData);
+        StringMethods.CheckIfTheStringContainsTheABC(inputData);
+        StringMethods.CheckIfAStringStartingWithA555(inputData);
+        StringMethods.CheckIfAStringEndsWithA1a2b(inputData);
+        StringMethods.OnlyLowerCaseLettersInFormat(inputData);
+        StringMethods.OnlyUpperCaseLettersInFormat(inputData);
+        StringMethods.FirstTwoBlocks(inputData);
 
 
     }
@@ -23,7 +29,7 @@ internal class Program
                     twoBlocks += c;
                 }
             }
-            Console.WriteLine($"First two number blocks {twoBlocks}");
+            Console.WriteLine(twoBlocks);
         }
 
         public static void ReplaceLettersToStars(string inputData)
@@ -41,8 +47,8 @@ internal class Program
                     temp[i] = "***";
                 }
             }
-            replaceLettersToStars = string.Join("-", temp);       
-            Console.WriteLine($"Block letters replaced with stars {replaceLettersToStars}")
+            replaceLettersToStars = string.Join("-", temp);
+            Console.WriteLine($"Block letters replaced with stars {replaceLettersToStars}");
         }
 
         public static void OnlyLowerCaseLettersInFormat(string str)
